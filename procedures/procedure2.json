@@ -1,0 +1,15 @@
+{
+  "name": "Test specific procedure",
+  "description": "Example procedure 2",
+  "steps": [
+    {
+      "description": "step 1",
+      "action": "click",
+      "xpath": "//div[contains(@class, 'some-class')]"
+    }, {
+      "description": "step 2",
+      "action": "check exists",
+      "xpath": "//div[contains(@class, 'some-other-class')]"
+    }
+  ]
+}

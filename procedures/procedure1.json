@@ -1,0 +1,24 @@
+{
+  "name": "Procedure 1",
+  "description": "Example procedure 1",
+  "requiredArguments": [
+    "username",
+    "password"
+  ],
+  "steps": [
+    {
+      "description": "Set username input field",
+      "action": "string input",
+      "xpath": "//input[contains(@class, 'username')]",
+      "value": "^username^"
+    }, {
+      "description": "Set password input field",
+      "action": "string input",
+      "xpath": "//input[contains(@class, 'password')]"
+    }, {
+      "description": "Click the sign in button",
+      "action": "click",
+      "xpath": "//button[text()[contains(., 'Sign In')]]"
+    }
+  ]
+}

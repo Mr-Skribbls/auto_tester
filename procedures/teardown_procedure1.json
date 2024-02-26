@@ -1,0 +1,11 @@
+{
+  "name": "Teardown Procedure 1",
+  "description": "Example teardown procedure 1",
+  "steps": [
+    {
+      "description": "Click the sign out button",
+      "action": "click",
+      "xpath": "//button[contains(@class, 'Sign Out')]"
+    }
+  ]
+}

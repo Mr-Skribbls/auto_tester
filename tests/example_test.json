@@ -1,0 +1,34 @@
+{
+  "name": "Example Test",
+  "description": "Description of the example test",
+  "procedures": [
+    {
+      "path": "procedures\\procedure1.json",
+      "arguments": {
+        "user": "Username",
+        "password": "Password"
+      }
+    }, {
+      "path": "procedures\\procedure2.json"
+    }, {
+      "name": "Test specific procedure",
+      "description": "Example of a test specific procedure",
+      "steps": [
+        {
+          "description": "step 1",
+          "action": "click",
+          "xpath": "//div[contains(@class, 'some-class')]"
+        }, {
+          "description": "step 2",
+          "action": "check exists",
+          "xpath": "//div[contains(@class, 'some-other-class')]"
+        }
+      ]
+    }
+  ],
+  "teardownProcedures": [
+    {
+      "path": "procedures\\teardown_procedure1.json"
+    }
+  ]
+}
