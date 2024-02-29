@@ -4,21 +4,22 @@ from selenium.common.exceptions import InvalidSelectorException
 from selenium.common.exceptions import StaleElementReferenceException
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.support.wait import WebDriverWait
+from message_colors import color_message
 
 def select_element(driver, xpath, waitUntilCondition):
   try:
     ignored_exceptions = (
-      # StaleElementReferenceException,
-      # NoSuchElementException
+      StaleElementReferenceException,
+      NoSuchElementException
     )
     element = WebDriverWait(driver, 10, ignored_exceptions=ignored_exceptions).until(waitUntilCondition)
     return element
   except TimeoutException:
-    print(f'Fail: Element {xpath} does not exist.')
+    print(color_message(f'Fail: Element {xpath} does not exist.')['red'])
   except ElementNotInteractableException:
-    print(f'Fail: Element {xpath} is not interactable.')
+    print(color_message(f'Fail: Element {xpath} is not interactable.')['red'])
   except InvalidSelectorException:
-    print(f'Invalid Selector in {xpath}.')
+    print(color_message(f'Invalid Selector in {xpath}.')['red'])
 
 def str_apply_arguments(str, arguments):
   res = str
